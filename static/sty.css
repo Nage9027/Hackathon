@@ -1,0 +1,107 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    overflow: hidden;
+    /* Set the background video URL dynamically */
+    background: url("{{ video_url }}") no-repeat center center fixed;
+    object-fit: cover;
+  }
+
+  /* Navigation Bar */
+  .navbar {
+    background-color: #4CAF50;
+    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+    color: white;
+  }
+
+  .navbar a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+  }
+
+  .navbar a:hover {
+    background-color: #45a049;
+    border-radius: 5px;
+  }
+
+  /* Dashboard Container */
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
+  }
+
+  .card {
+    background: transparent;
+    margin: 15px;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    flex: 1 1 calc(33.33% - 30px);
+    text-align: center;
+  }
+
+  .card h3 {
+    color:white;
+  }
+
+  .card p {
+    color:white;
+  }
+
+  .card a {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 15px;
+    background-color: #4CAF50;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+  }
+
+  .card a:hover {
+    background-color: #45a049;
+  }
+
+  /* Upload Form */
+  .upload-form {
+    margin-top: 20px;
+    text-align: center;
+  }
+
+  /* File Input Form for Text File Name */
+  .textfile-form {
+    margin-top: 20px;
+    text-align: center;
+  }
+
+  .textfile-form input[type="text"] {
+    padding: 10px;
+    font-size: 16px;
+    margin-right: 10px;
+  }
+
+  .textfile-form button {
+    padding: 10px 15px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+  }
+
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .card {
+      flex: 1 1 100%;
+    }
+  }
+  #l
+  {
+    color:white;
+  }
