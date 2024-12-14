@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resources</title>
+    <link rel="stylesheet" href="css/resoures.css">
+</head>
+<style>
+    /* General Reset */
+body, h2, p, a {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    box-sizing: border-box;
+}
+
+/* Navigation Bar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+}
+
+.navbar a {
+    color: #fff;
+    text-decoration: none;
+    margin-left: 15px;
+    font-size: 16px;
+}
+
+.navbar a:hover {
+    color: #f1c40f;
+}
+
+/* Resources Container */
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Resource Boxes */
+.resource-box {
+    width: 300px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.resource-box h2 {
+    margin-bottom: 10px;
+    font-size: 22px;
+    color: #333;
+}
+
+.resource-box p {
+    margin-bottom: 15px;
+    font-size: 16px;
+    color: #666;
+}
+
+.resource-box a {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #3498db;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+
+.resource-box a:hover {
+    background-color: #2980b9;
+}
+
+.resource-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+</style>
+<body>
+     <!-- Navigation Bar -->
+ 
+
+    <!-- Resources Container -->
+    <div class="container">
+        <div class="resource-box">
+            <h2>10th Class</h2>
+            <p>Find resources for your 10th class studies.</p>
+            <a href="#">View Resources</a>
+        </div>
+        <div class="resource-box">
+            <h2>Intermediate</h2>
+            <p>Find resources for your Intermediate studies.</p>
+            <a href="#">View Resources</a>
+        </div>
+        <div class="resource-box">
+            <h2>B.Tech</h2>
+            <p>Find resources for your B.Tech studies.</p>
+            <a href="#">View Resources</a>
+        </div>
+    </div>
+</body>
+</html>

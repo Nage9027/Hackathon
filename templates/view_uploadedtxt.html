@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text File Summary</title>
+</head>
+<body>
+    <h1>Text File Analysis</h1>
+    <div>
+        <h3>Uploaded Text Files:</h3>
+        <ul>
+            {% for text_file in text_files %}
+                <li>{{ text_file }}</li>
+            {% endfor %}
+        </ul>
+    </div>
+
+    {% if summary %}
+        <div class="summary">
+            <h3>Summary of {{ textfile_name }}:</h3>
+            <p>{{ summary }}</p>
+        </div>
+    {% endif %}
+</body>
+</html>

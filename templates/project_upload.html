@@ -1,0 +1,95 @@
+<!-- templates/project_upload.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Upload</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f9;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        .form-group {
+            margin: 20px 0;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+
+        .form-group button {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        .form-group button:hover {
+            background-color: #45a049;
+        }
+
+        .pdf-list {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .pdf-item {
+            background-color: white;
+            margin: 10px 0;
+            padding: 10px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .pdf-item a {
+            text-decoration: none;
+            color: #4CAF50;
+            font-size: 18px;
+        }
+
+        .pdf-item a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Upload and View Projects</h1>
+
+        <!-- Project Upload Form -->
+        <div class="form-group">
+            <h2>Upload Project File</h2>
+            <form action="{{ url_for('upload_project') }}" method="POST" enctype="multipart/form-data">
+                <input type="file" name="project_file" required>
+                <button type="submit">Upload Project</button>
+            </form>
+        </div>
+
+        <!-- View Uploaded Projects -->
+        <h2>View Uploaded Projects</h2>
+        <ul class="pdf-list">
+            {% for project in project_files %}
+            <li class="pdf-item">
+                <a href="{{ url_for('download_file', filename=project) }}" target="_blank">View {{ project }}</a>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+</body>
+</html>
